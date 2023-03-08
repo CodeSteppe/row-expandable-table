@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Row Expandable Table</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  
+  <table>
+    <thead>
+      <tr>
+        <th width="30px"></th>
+        <th>Column 1</th>
+        <th>Column 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Parent row -->
+      <tr class="parent-row">
+        <td>
+          <div class="expand-indicator"></div>
+        </td>
+        <td>Row 1</td>
+        <td>Parent content 1</td>
+      </tr>
+      <!-- Nested content -->
+      <tr class="nested-content hidden">
+        <td colspan="3">
+          <p>Nested content 1</p>
+        </td>
+      </tr>
+      <!-- Parent row -->
+      <tr class="parent-row">
+        <td>
+          <div class="expand-indicator"></div>
+        </td>
+        <td>Row 2</td>
+        <td>Parent content 2</td>
+      </tr>
+      <!-- Nested content -->
+      <tr class="nested-content hidden">
+        <td colspan="3">
+          <p>Nested content 2</p>
+        </td>
+      </tr>
+      <!-- Parent row -->
+      <tr class="parent-row">
+        <td>
+          <div class="expand-indicator"></div>
+        </td>
+        <td>Row 3</td>
+        <td>Parent content 3</td>
+      </tr>
+      <!-- Nested content -->
+      <tr class="nested-content hidden">
+        <td colspan="3">
+          <p>Nested content 3</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,48 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+/* Hide the nested content by default */
+.hidden {
+  display: none;
+}
+
+th:not(:last-child):not(:first-child) {
+  resize: horizontal;
+  overflow: auto;
+}
+
+/* Update the styling of the parent row to indicate that it can be expanded */
+.parent-row {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.parent-row:hover {
+  background-color: #f5f5f5;
+}
+
+.expand-indicator {
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.expand-indicator::before {
+  content: ">";
+}
+
+.parent-row.expanded {
+  background-color: #cceeff;
+}
+
+.parent-row.expanded .expand-indicator {
+  transform: rotate(90deg);
+}
