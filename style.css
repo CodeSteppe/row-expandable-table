@@ -1,29 +1,17 @@
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 th,
 td {
   border: 1px solid black;
-  padding: 8px;
+  padding: 20px;
 }
 
-/* Hide the nested content by default */
-.hidden {
-  display: none;
-}
-
-th:not(:last-child):not(:first-child) {
-  resize: horizontal;
-  overflow: auto;
-}
-
-/* Update the styling of the parent row to indicate that it can be expanded */
 .parent-row {
   cursor: pointer;
-  transition: all 0.3s;
 }
 
 .parent-row:hover {
@@ -32,18 +20,23 @@ th:not(:last-child):not(:first-child) {
 
 .expand-indicator {
   text-align: center;
-  transition: all 0.3s;
+  font-weight: bold;
 }
 
 .expand-indicator::before {
   content: "+";
-  font-weight: bold
-}
-
-.parent-row.expanded {
-  background-color: #cceeff;
 }
 
 .parent-row.expanded .expand-indicator::before {
   content: "-";
+}
+
+.nested-content {
+  background-color: #cfeefd;
+  /* Hide the nested content by default */
+  display: none;
+}
+
+.parent-row.expanded + .nested-content {
+  display: table-row;
 }
